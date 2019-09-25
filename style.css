@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #eeeeee;
+}
+
+.header {
+    background-color: #23374d;
+    height: 700px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    line-height: 70px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10%;
+    color: #eeeeee;
+    }
+
+.logocolor {
+    color: #e5e5e5;
+}
+
+span .here {
+    color: orangered;
+}
+
+ul {
+    display: inline-flex;
+    margin-right: 10%;
+}
+
+li {
+    list-style: none;
+    /*margin-left: 20px;*/
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+.loginbutton {
+    border: 1px solid #eeeeee;
+    border-radius: 30px;
+    padding: 5px 30px;
+}
+
+.introduction {
+    margin: 120px auto;
+    width: 50%;
+    text-align: center;
+}
+
+.introp {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.introp2{ font-size: 13px;}
+
+.introspan { color: #e5e5e5;}
+
+.introbutton {
+    margin-top: 30px;
+    border: none;
+    padding: 15px 25px;
+    border: 1px solid #e5e5e5;
+    border-radius: 40px;
+    width: 300px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #23374d;
+    color: #eeeeee;
+}
+
+
+/* oluscc ... */
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.header-signup {
+    background-color: #23374d;
+    height: 70px;
+    overflow: hidden;
+}
+
+.nav-icon {
+    display: none;
+  }
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: #23374d;
+    
+}
+.main{
+    max-width: 60%;
+    margin: 0 auto;
+    height: 100vh;
+}
+.content {
+    margin: 10px auto;
+    padding-top: 30px;
+    width: 50%;
+    height: 85%;    
+}
+footer{
+    width: 50%;
+    margin: 0px auto 10px auto;
+   }
+   #view{
+    padding: 9px 3px 13px 0;
+    background-color: #23374d;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#form input{
+    padding: 10px 10px;
+    width: 250px;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    outline:none;
+    margin-bottom: 10px;
+}
+
+#submit{
+    background:orangered;
+    color: #fff;
+    height: 36px;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 5px;
+    border: none !important;
+    width: 250px !important;
+    }
+
+    .terms{
+        font-size: 14px;
+    }
+
+    .terms a {
+        text-decoration: underline;
+    }
+
+    /* Mobile Phones */
+    @media all and (max-device-width: 480px) {
+
+        
+        .header-signup {
+            background-color: #23374d;
+            width: 100%;
+            height: 70px;
+            
+        }        
+
+        .logo {
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 10%;
+            color: #eeeeee;
+        }
+        
+        .nav-div a.nav-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 50px;
+            
+        }
+
+        .responsive {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-items: flex-start;
+        padding-top: 20px;
+        margin-left: 50px;
+
+        text-align: left;
+        }
+        .nav-div a{
+            display: none;
+        }
+
+        .main{
+            width: 100;
+            max-width: 80%;
+            margin: 0 auto;
+            height: 100vh;
+        }
+        .content {
+        margin: 10px auto;
+        padding-top: 30px;
+        width: 90%;
+        height: 90%;    
+    }
+    footer{
+        width: 50%;
+        margin: 0px auto 10px auto;
+       }
+    #view{
+        padding: 9px 3px 13px 0;
+        background-color: #182955;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    #form input{
+        padding: 10px 10px;
+        width: 80%;
+        border: none;
+        border-bottom: 1px solid black;
+        border-radius: 5px;
+        outline:none;
+        margin-bottom: 10px;
+    }
+    
+    #submit{
+        background:orangered;
+        color: #fff;
+        height: 36px;
+        font-weight: bold;
+        font-size: 24px;
+        border-radius: 5px;
+        border: none !important;
+        width: 80% !important;
+        }
+    
+        .terms{
+            font-size: 14px;
+        }
+
+        /* Tablets & iPads */
+    
+    @media only screen and (min-width:768px) and (max-width: 1600px){
+
+        
+        .header-signup {
+            background-color: #23374d;
+            width: 100%;
+            height: 70px;
+            
+        }        
+
+        .logo {
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 10%;
+            color: #eeeeee;
+        }
+        
+        .nav-div a.nav-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 50px;
+            
+        }
+
+        .responsive {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-items: flex-start;
+        padding-top: 20px;
+        margin-left: 50px;
+
+        text-align: left;
+        }
+        .nav-div a{
+            display: none;
+        }
+
+        .main{
+           
+            max-width: 70%;
+            margin: 0 auto;
+            height: 100vh;
+        }
+        .content {
+        margin: 10px auto;
+        padding-top: 30px;
+        max-width: 90%;
+        height: 90%;    
+    }
+    footer{
+        width: 50%;
+        margin: 0px auto 10px auto;
+       }
+    #view{
+        padding: 9px 3px 13px 0;
+        background-color: #182955;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    #form input{
+        padding: 10px 10px;
+        width: 80%;
+        border: none;
+        border-bottom: 1px solid black;
+        border-radius: 5px;
+        outline:none;
+        margin-bottom: 10px;
+    }
+    
+    #submit{
+        background:orangered;
+        color: #fff;
+        height: 36px;
+        font-weight: bold;
+        font-size: 24px;
+        border-radius: 5px;
+        border: none !important;
+        width: 80% !important;
+        }
+    
+        .terms{
+            font-size: 14px;
+        }
+
+
+    }
+}
