@@ -1,3 +1,29 @@
+<?php
+$warning="";
+$loggedIn="";
+if(count($_POST)>0) {
+    $info = json_decode(file_get_contents("info.json"));
+    $email = $_POST["email"];
+    
+    $password = $_POST["password"];
+    //$confirmpassword = $_POST["confirmpassword"];
+
+
+    
+    if(in_array($email ,array_column($info, 'email')) && in_array($password, array_column($info, "password"))){
+        //$warning = "This email has been registered";
+        // $name = $info->name;
+        $loggedIn = "Log in successful";
+        session_start();
+        $_SESSION["user_login"] = "You";
+        header("Location: index.php");
+    }else{
+        $warning = "Email or password incorrect";
+    }
+}
+    
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -37,8 +63,8 @@
             
                 <h1>Log In </h1>
                 
-                <form id="form" action="login.php" method="POST">
-                   
+                <form id="form" action="" method="POST">
+                    <div class="message"><?php if($warning!="") { echo $warning; } ?></div>   
                     <label>Email</label><br>
                     <input type="email" id="email" name="email"  placeholder="example@xyz.com" required><span id="Evalid"></span><br><br>
                    
@@ -56,7 +82,7 @@
             </footer>
         </div></center> 
     </div>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 
 
 

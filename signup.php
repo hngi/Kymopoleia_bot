@@ -1,3 +1,37 @@
+<?php
+$warning="";
+if(count($_POST)>0) {
+    $info = json_decode(file_get_contents("info.json"));
+    
+    $email = $_POST["email"];
+    $name = $_POST["name"];
+    $password = $_POST["password"];
+    $confirmpassword = $_POST["confirmpassword"];
+    
+    if(in_array($email ,array_column($info, 'email'))){
+        $warning = "This email has been registered";
+    }else if (empty($email) || empty($name)  || empty($password)  || empty($confirmpassword)){
+        $warning = "No field should be empty";
+    }else{
+        if($_POST["password"] === $_POST["confirmpassword"]){
+            array_push($info, [
+                "email" => $email,
+                "password" => $password,
+                "name" => $name
+            ]);
+
+            file_put_contents('info.json', json_encode($info));
+            session_start();
+            $_SESSION['user_login'] = $name;
+            header("Location: index.php");
+        }else{
+            $warning = "Password mismatch";
+        }
+    }
+    
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -37,7 +71,8 @@
             
                 <h1>Sign Up </h1>
                 
-                <form id="form" action="signup.php" method="POST">
+                <form id="form" action="" method="POST">
+                    <div class="message"><?php if($warning!="") { echo $warning; } ?></div>
                     <label>Full Names</label><br>
                     <input type="text" id="username" name="username"  placeholder="Lastname Firstname" required><span id="Evalid"></span><br><br>
                     
@@ -63,7 +98,7 @@
             </footer>
         </div></center> 
     </div>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 
 
 
