@@ -16,7 +16,7 @@ if(count($_POST)>0) {
         $loggedIn = "Log in successful";
         session_start();
         $_SESSION["user_login"] = "You";
-        header("Location: index.php");
+        header("Location: success.php");
     }else{
         $warning = "Email or password incorrect";
     }

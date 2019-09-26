@@ -23,7 +23,7 @@ if(count($_POST)>0) {
             file_put_contents('info.json', json_encode($info));
             session_start();
             $_SESSION['user_login'] = $name;
-            header("Location: index.php");
+            header("Location: success.php");
         }else{
             $warning = "Password mismatch";
         }
@@ -75,7 +75,7 @@ if(count($_POST)>0) {
                 <form id="form" action="" method="POST">
                     <div class="message"><?php if($warning!="") { echo $warning; } ?></div>
                     <label>Full Names</label><br>
-                    <input type="text" id="username" name="name"  placeholder="Lastname Firstname" required><span id="Evalid"></span><br><br>
+                    <input type="text" id="username" name="name"  placeholder="Firstname Lastname " required><span id="Evalid"></span><br><br>
                     
                     <label>Email</label><br>
                     <input type="email" id="email" name="email"  placeholder="example@xyz.com" required><span id="Evalid"></span><br><br>
