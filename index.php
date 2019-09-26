@@ -26,8 +26,8 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Features</a></li>
-                <li><a href="#">Guides</a></li>
-                <li><a href="login.html"><span class="loginbutton">LogIn </span></a></li>
+                <li><a href="signup.php"><span class="loginbutton">Sign Up</span> </a></li>
+                <li><a href="login.php"><span class="loginbutton">LogIn </span></a></li>
             </ul>
         </section>
 
