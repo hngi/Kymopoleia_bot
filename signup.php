@@ -1,3 +1,37 @@
+<?php
+$warning="";
+if(count($_POST)>0) {
+    $info = json_decode(file_get_contents("info.json"));
+    
+    $email = $_POST["email"];
+    $name = $_POST["name"];
+    $password = $_POST["password"];
+    $confirmpassword = $_POST["confirmpassword"];
+    
+    if(in_array($email ,array_column($info, 'email'))){
+        $warning = "This email has been registered";
+    }else if (empty($email) || empty($name)  || empty($password)  || empty($confirmpassword)){
+        $warning = "No field should be empty";
+    }else{
+        if($_POST["password"] === $_POST["confirmpassword"]){
+            array_push($info, [
+                "email" => $email,
+                "password" => $password,
+                "name" => $name
+            ]);
+
+            file_put_contents('info.json', json_encode($info));
+            session_start();
+            $_SESSION['user_login'] = $name;
+            header("Location: success.php");
+        }else{
+            $warning = "Password mismatch";
+        }
+    }
+    
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -16,7 +50,7 @@
         <center><header class="header-signup">
         <section class="navigation">
             <div class="logo"> <i class="fa fa-robot" style="color: white"></i> <span class="logocolor">Kymopoleia</span>Bot</div>
-            <div id="nav-div" class="nav-div">
+            <!-- <div id="nav-div" class="nav-div">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">Features</a></li>
@@ -25,11 +59,12 @@
                     <a href="javascript:void(0);" class="nav-icon" onclick="myFunction()">
                         <img src="img/mdi_menu.png" alt="">
                     </a>
-                </ul>
-            </div></center>
+                </ul> 
+            </div>-->
        
         </section>
-    </header>      
+    </header>
+    </center>      
 
     <div class="container">
         <center><div class="main">
@@ -37,9 +72,10 @@
             
                 <h1>Sign Up </h1>
                 
-                <form id="form" action="signup.php" method="POST">
+                <form id="form" action="" method="POST">
+                    <div class="message"><?php if($warning!="") { echo $warning; } ?></div>
                     <label>Full Names</label><br>
-                    <input type="text" id="username" name="username"  placeholder="Lastname Firstname" required><span id="Evalid"></span><br><br>
+                    <input type="text" id="username" name="name"  placeholder="Firstname Lastname " required><span id="Evalid"></span><br><br>
                     
                     <label>Email</label><br>
                     <input type="email" id="email" name="email"  placeholder="example@xyz.com" required><span id="Evalid"></span><br><br>
@@ -48,10 +84,10 @@
                     <input type="password" name="password" id="password" placeholder="Minimum of 8 Characters" required><br><br>
                     
                    <label>Confirm Password</label><br>
-                    <input type="password" name="password2" id="password2" placeholder="Retype Password" required onkeyup='checkPassword();'>
+                    <input type="password" name="confirmpassword" id="password2" placeholder="Retype Password" required onkeyup='checkPassword();'>
                     <span id="message"></span><br><br>
                     
-                    <button id="submit" type="submit">Sign Up</button><br><br>
+                    <input id="submit" type="submit">
                     <span>Already have an account? Log In <a href="login.html"><span class="here">here</span></a>.</span><br><br>
                     <span class="terms">By clicking the Sign Up button, you agree to our</span><br>
                     <span class="terms"><a href="">Terms & Conditions</a> and <a href=""> Privacy Policy</a></span>
@@ -63,7 +99,7 @@
             </footer>
         </div></center> 
     </div>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 
 
 
