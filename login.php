@@ -72,7 +72,7 @@ if(count($_POST)>0) {
                     <input type="password" name="password" id="password" placeholder="Minimum of 8 Characters" required><br><br>
                     
                     <button id="submit" type="submit">Log In</button><br><br>
-                    <span>Don't have an account? Sign Up <a href="signup.html"><span class="here">here</span></a>.</span><br><br>
+                    <span>Don't have an account? Sign Up <a href="signup.php"><span class="here">here</span></a>.</span><br><br>
                     <span class="terms"><a href="">Terms & Conditions</a> and <a href=""> Privacy Policy</a></span>
                 </form>           
             </div>

@@ -87,7 +87,7 @@ if(count($_POST)>0) {
                     <input type="password" name="confirmpassword" id="password2" placeholder="Retype Password" required onkeyup='checkPassword();'>
                     <span id="message"></span><br><br>
                     
-                    <input id="submit" type="submit">Sign Up</button><br><br>
+                    <input id="submit" type="submit">
                     <span>Already have an account? Log In <a href="login.html"><span class="here">here</span></a>.</span><br><br>
                     <span class="terms">By clicking the Sign Up button, you agree to our</span><br>
                     <span class="terms"><a href="">Terms & Conditions</a> and <a href=""> Privacy Policy</a></span>

@@ -24,8 +24,8 @@
         <section class="navigation">
             <div class="logo"> <i class="fa fa-robot" style="color: white"></i> <span class="logocolor">Kymopoleia</span>Bot</div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
+                <!-- <li><a href="#">Home</a></li> -->
+                <!-- <li><a href="#">Features</a></li> -->
                 <!-- <li><a href="signup.php"><span class="loginbutton">Sign Up</span> </a></li> -->
                 <li><a href="logout.php"><span class="loginbutton">Logout</span></a></li>
             </ul>
