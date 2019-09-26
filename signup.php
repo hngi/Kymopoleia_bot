@@ -50,7 +50,7 @@ if(count($_POST)>0) {
         <center><header class="header-signup">
         <section class="navigation">
             <div class="logo"> <i class="fa fa-robot" style="color: white"></i> <span class="logocolor">Kymopoleia</span>Bot</div>
-            <div id="nav-div" class="nav-div">
+            <!-- <div id="nav-div" class="nav-div">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">Features</a></li>
@@ -59,11 +59,12 @@ if(count($_POST)>0) {
                     <a href="javascript:void(0);" class="nav-icon" onclick="myFunction()">
                         <img src="img/mdi_menu.png" alt="">
                     </a>
-                </ul>
-            </div></center>
+                </ul> 
+            </div>-->
        
         </section>
-    </header>      
+    </header>
+    </center>      
 
     <div class="container">
         <center><div class="main">
@@ -74,7 +75,7 @@ if(count($_POST)>0) {
                 <form id="form" action="" method="POST">
                     <div class="message"><?php if($warning!="") { echo $warning; } ?></div>
                     <label>Full Names</label><br>
-                    <input type="text" id="username" name="username"  placeholder="Lastname Firstname" required><span id="Evalid"></span><br><br>
+                    <input type="text" id="username" name="name"  placeholder="Lastname Firstname" required><span id="Evalid"></span><br><br>
                     
                     <label>Email</label><br>
                     <input type="email" id="email" name="email"  placeholder="example@xyz.com" required><span id="Evalid"></span><br><br>
@@ -83,10 +84,10 @@ if(count($_POST)>0) {
                     <input type="password" name="password" id="password" placeholder="Minimum of 8 Characters" required><br><br>
                     
                    <label>Confirm Password</label><br>
-                    <input type="password" name="password2" id="password2" placeholder="Retype Password" required onkeyup='checkPassword();'>
+                    <input type="password" name="confirmpassword" id="password2" placeholder="Retype Password" required onkeyup='checkPassword();'>
                     <span id="message"></span><br><br>
                     
-                    <button id="submit" type="submit">Sign Up</button><br><br>
+                    <input id="submit" type="submit">Sign Up</button><br><br>
                     <span>Already have an account? Log In <a href="login.html"><span class="here">here</span></a>.</span><br><br>
                     <span class="terms">By clicking the Sign Up button, you agree to our</span><br>
                     <span class="terms"><a href="">Terms & Conditions</a> and <a href=""> Privacy Policy</a></span>
