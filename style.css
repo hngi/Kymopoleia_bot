@@ -162,6 +162,7 @@ footer{
         text-decoration: underline;
     }
 
+/*updated for responsiveness */
     
     @media all and (max-device-width: 480px) {           
        
