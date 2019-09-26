@@ -42,7 +42,7 @@ if(count($_POST)>0) {
         <center><header class="header-signup">
         <section class="navigation">
             <div class="logo"> <i class="fa fa-robot" style="color: white"></i> <span class="logocolor">Kymopoleia</span>Bot</div>
-            <div id="nav-div" class="nav-div">
+            <!-- <div id="nav-div" class="nav-div">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">Features</a></li>
@@ -52,11 +52,11 @@ if(count($_POST)>0) {
                         <img src="img/mdi_menu.png" alt="">
                     </a>
                 </ul>
-            </div></center>
+            </div> -->
        
         </section>
     </header>      
-
+    </center>
     <div class="container">
         <center><div class="main">
             <div class="content">

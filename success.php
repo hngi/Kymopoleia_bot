@@ -26,8 +26,8 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Features</a></li>
-                <li><a href="signup.php"><span class="loginbutton">Sign Up</span> </a></li>
-                <li><a href="login.php"><span class="loginbutton">LogIn </span></a></li>
+                <!-- <li><a href="signup.php"><span class="loginbutton">Sign Up</span> </a></li> -->
+                <li><a href="logout.php"><span class="loginbutton">Logout</span></a></li>
             </ul>
         </section>
 
@@ -35,10 +35,10 @@
             <h2>Do Extra With <span class="introspan">KYMOPOLEIA BOT </span> ... In Slack!</h2>
             <p class="introp">Join thousands of teams that use KymopoleiaBot to automate storage of Conversations on Slack workspace to an external drive</p>
             <br>
-            <p><i class="fa fa-slack" style="color: orangered; font-size: 30px; margin-right: 10px"></i> Welcome to Slack KymopoleiaBot</p>
+            <a href="#"><button class="introbutton"> <i class="fa fa-slack" style="color: orangered; font-size: 30px; margin-right: 10px"></i> Add to Slack</button></a>
             <br>
             <br>
-
+            <p class="introp2">Start your free trial today. No credit card required.</p>
         </section>
     </header>
 </body>
