@@ -23,7 +23,7 @@ if(count($_POST)>0) {
             file_put_contents('info.json', json_encode($info));
             session_start();
             $_SESSION['user_login'] = $name;
-            header("Location: success.php");
+            header("Location: landing.php");
         }else{
             $warning = "Password mismatch";
         }
