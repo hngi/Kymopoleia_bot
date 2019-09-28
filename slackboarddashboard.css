@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #eeeeee;
+    overflow-x:hidden;
+}
+
+.leftverticalmenu {
+    height: 100vh;
+    width: 250px;
+    text-align: left;
+    position: fixed;
+    background-color: #23374d;
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 85% 85%, 85% 100%, 50% 85%, 0% 85%); */
+    border-top: 1px solid #eeeeee;
+}
+
+.workspace {
+    text-align: center;
+    margin-bottom: 20px;
+    color: orangered;
+    filter: brightness(90%);
+}
+
+.navigation {
+    margin: 15px 15px;
+}
+
+.displayname {
+    margin-top: 15px;
+    filter: brightness(80%);
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+#searchbox {
+    border: none;
+    width: 98%;
+    padding: 8px;
+    background-color: #23374d;
+    filter: brightness(80%);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+.mainnav li {
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.mainnav li:hover {
+    transform: scale(1.09);
+    transition: 0.2s ease-in-out;
+}
+
+.messagecontainer {
+    position: absolute;
+    left: 250px;
+    width: 85%;
+    border-left: 1px solid grey;
+    height: 100vh;
+}
+
+.headertext {
+    padding: 15px;
+    text-align: center;
+    border-left: 1px solid #eeeeee;
+    background-color: #23374d;
+}
+
+#message{position: fixed;
+bottom: 20px; 
+width: 80%;
+border: none;
+border: 2px solid grey;
+padding: 17px;
+font-size: 18px;
+}
+
+.messagebody{ text-align: left; padding: 15px; color: black; font-weight: bold;}
