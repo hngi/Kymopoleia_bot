@@ -143,15 +143,16 @@ footer{
     margin-bottom: 10px;
 }
 
+
 #submit{
     background:orangered;
     color: #fff;
-    height: 36px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     border-radius: 5px;
     border: none !important;
     width: 250px !important;
+    text-transform: uppercase;
     }
 
     .terms{
