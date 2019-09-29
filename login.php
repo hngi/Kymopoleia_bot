@@ -16,7 +16,7 @@ if(count($_POST)>0) {
         $loggedIn = "Log in successful";
         session_start();
         $_SESSION["user_login"] = "You";
-        header("Location: landing.php");
+        header("Location: success.php");
     }else{
         $warning = "Email or password incorrect";
     }
@@ -27,7 +27,7 @@ if(count($_POST)>0) {
 <html>
 
 <head>
-    <title>KymopoleiaBot | Log In</title>
+    <title>KymopoleiaBot | Sign Up</title>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>    
     <meta name='viewport' content='width=device-width, initial-scale=1'>           
@@ -58,12 +58,6 @@ if(count($_POST)>0) {
                     <li class="nav-item">
                         <a class="nav-link" style="color: white" href="index.php">Home</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" style="color: white" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: white" href="#">Guides</a>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" style="color: white" href="signup.php"><span class="loginbutton">Sign Up </span></a>
                     </li>

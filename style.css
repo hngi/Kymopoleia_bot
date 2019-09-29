@@ -15,6 +15,7 @@ body {
 .header {
     background-color: #23374d;
     height: 700px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
 }
 
 .navigation {
@@ -58,18 +59,25 @@ a {
 .loginbutton {
     border: 1px solid #eeeeee;
     border-radius: 30px;
-    padding: 5px 30px;
+    padding: 5px 10px;
 }
 
 .introduction {
     margin: 120px auto;
-    width: 50%;
+    width: 70%;
     text-align: center;
 }
 
 .introp {
     margin-top: 20px;
     font-size: 18px;
+}
+
+.welcome {
+    background-color: orangered; 
+    font-size: 24px; 
+    border-radius: 5px;
+   
 }
 
 .introp2{ font-size: 13px;}
@@ -182,6 +190,14 @@ footer{
             margin-left: 1%;
             color: #eeeeee;
         } 
+
+        .welcome {
+            background-color: orangered; 
+            font-size: 16px; 
+            border-radius: 5px;
+           
+        }
+        
     }
         
     @media all and (max-device-width: 994px) {
@@ -201,4 +217,11 @@ footer{
             margin-left: 1%;
             color: #eeeeee;
         }  
+
+        .welcome {
+            background-color: orangered; 
+            font-size: 16px; 
+            border-radius: 5px;
+           
+        }
  }
