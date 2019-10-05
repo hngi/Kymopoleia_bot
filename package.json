@@ -1,0 +1,27 @@
+{
+  "name": "slackbot-project",
+  "version": "1.0.0",
+  "description": "a simple slackbot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "env-cmd -f ./config/.env nodemon app.js"
+  },
+  "author": "Oladele Omoarukhe",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^3.3.0",
+    "axios": "^0.19.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "googleapis": "^39.2.0",
+    "readline": "^1.3.0",
+    "request": "^2.88.0",
+    "slackbots": "^1.2.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.0.1",
+    "nodemon": "^1.19.2"
+  }
+}
